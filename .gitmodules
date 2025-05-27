@@ -1,0 +1,30 @@
+[submodule "colcon_ws/src/moveit_task_constructor"]
+	path = colcon_ws/src/moveit_task_constructor
+	url = https://github.com/moveit/moveit_task_constructor.git
+[submodule "colcon_ws/src/moveit_visual_tools"]
+	path = colcon_ws/src/moveit_visual_tools
+	url = https://github.com/moveit/moveit_visual_tools
+[submodule "colcon_ws/src/ros2_kortex"]
+	path = colcon_ws/src/ros2_kortex
+	url = https://github.com/Kinovarobotics/ros2_kortex.git
+[submodule "colcon_ws/src/ros2_robotiq_gripper"]
+	path = colcon_ws/src/ros2_robotiq_gripper
+	url = https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
+[submodule "colcon_ws/src/serial"]
+	path = colcon_ws/src/serial
+	url = https://github.com/tylerjw/serial.git
+[submodule "colcon_ws/src/rviz_visual_tools"]
+	path = colcon_ws/src/rviz_visual_tools
+	url = https://github.com/PickNikRobotics/rviz_visual_tools.git
+[submodule "colcon_ws/src/moveit2"]
+	path = colcon_ws/src/moveit2
+	url = https://github.com/moveit/moveit2
+[submodule "colcon_ws/src/moveit_resources"]
+	path = colcon_ws/src/moveit_resources
+	url = https://github.com/moveit/moveit_resources
+[submodule "colcon_ws/src/moveit_msgs"]
+	path = colcon_ws/src/moveit_msgs
+	url = https://github.com/moveit/moveit_msgs
+[submodule "colcon_ws/src/moveit2_tutorials"]
+	path = colcon_ws/src/moveit2_tutorials
+	url = https://github.com/moveit/moveit2_tutorials.git

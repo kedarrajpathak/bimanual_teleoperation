@@ -1,0 +1,36 @@
+aruco_pose_estimation_node:
+  ros__parameters:
+    # Topics for robot control
+    left_cube_pose_topic: "/left/servo_node/arm_pose_cmds"
+    right_cube_pose_topic: "/right/servo_node/arm_pose_cmds"
+    left_gripper_action: "/left_hand_controller/gripper_cmd"
+    right_gripper_action: "/right_hand_controller/gripper_cmd"
+    left_servo_service: "/left/servo_node/switch_command_type"
+    right_servo_service: "/right/servo_node/switch_command_type"
+    
+    # Camera settings
+    camera_id: 0
+    calibration_matrix_path: ""  # Empty for default path
+    distortion_coefficients_path: ""  # Empty for default path
+    publish_image: true
+    publish_rate: 30.0  # Hz
+    
+    # Image processing
+    flip_horizontal: false
+    flip_vertical: false
+    
+    # ArUco marker settings
+    aruco_dict_type: 0  # DICT_4X4_50
+    marker_length: 0.053  # meters
+    frame_id: "world"
+    left_marker_id: 5
+    right_marker_id: 4
+    
+    # Gripper control
+    gripper_close_position: 0.0
+    gripper_open_position: 0.8  # 0.035 for panda, 0.8 for kinova
+    gripper_max_effort: 100.0
+    gripper_trigger_angle: 0.5  # Threshold for gripper action
+    
+    # Teleop configuration
+    teleop_mode: "pose"  # Alternative: "twist"

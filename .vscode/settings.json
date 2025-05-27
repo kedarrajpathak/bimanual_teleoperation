@@ -1,0 +1,4 @@
+{
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "cmake.sourceDirectory": "/home/rapa/repos/thesis/bimanual_teleoperation/colcon_ws/src/moveit2_tutorials",
+}

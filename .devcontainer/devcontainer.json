@@ -1,0 +1,47 @@
+{
+    "name": "Bimanual Teleoperation",
+    "image": "bimanual-teleoperation:latest", // Use the existing Docker image name
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}",
+        "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
+    },
+    "runArgs": [
+        "--gpus=all", // Enable all available GPUs
+        "--rm", // Remove container when it exits
+        "--network=host", // Use host network stack
+        "--pid=host", // Use host's PID namespace
+        "--ipc=host", // Use host's IPC namespace
+        "--privileged", // Give extended privileges to container
+        "--runtime=nvidia", // Use NVIDIA runtime
+        "--device=/dev/video0:/dev/video0" // Pass through video device
+    ],
+    "forwardPorts": [
+        5000
+    ],
+    "workspaceFolder": "/repos/bimanual_teleoperation/",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "editor.formatOnSave": true,
+                "python.languageServer": "Pylance"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-vscode-remote.remote-containers",
+                "ms-azuretools.vscode-docker",
+                "tomoki1207.pdf",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools-extension-pack"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "mounts": [
+        "source=${localWorkspaceFolder}/..,target=/repos,type=bind",
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
+        "source=/dev,target=/dev,type=bind",
+        "source=${localEnv:HOME}/.Xauthority,target=/root/.Xauthority,type=bind"
+    ]
+}

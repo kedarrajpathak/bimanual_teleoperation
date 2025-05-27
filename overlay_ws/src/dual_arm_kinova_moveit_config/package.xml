@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>dual_arm_kinova_moveit_config</name>
+  <version>0.0.0</version>
+  <description>Package to use dual Kinova setup with moveit servo</description>
+  <author email="kedar.rajpathak@rwth-aachen.de">Kedar Rajpathak</author>
+  <maintainer email="kedar.rajpathak@rwth-aachen.de">Kedar Rajpathak</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>moveit_resources_panda_description</exec_depend>
+  <!-- disabled to remove circular dependencies
+  <exec_depend>moveit_ros_move_group</exec_depend>
+  <exec_depend>moveit_fake_controller_manager</exec_depend>
+  <exec_depend>moveit_kinematics</exec_depend>
+  <exec_depend>moveit_planners_ompl</exec_depend>
+  <exec_depend>moveit_ros_visualization</exec_depend>
+  -->
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>topic_tools</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+      <build_type>ament_cmake</build_type>
+  </export>
+</package>

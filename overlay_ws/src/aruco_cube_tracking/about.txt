@@ -1,0 +1,22 @@
+detect and track poses of two cubes
+the cubes have aruco markers on all 6 sides
+for a cube of side 1
+    the origin is at (0.5,0.5,0.5)
+    z axis is from (0.5,0.5,0.5) to (0,0,0) or from (0.5,0.5,0.5) to (1,1,1)
+    x and y axis are perpendicular to each other and the z axis
+
+
+features to include:
+    detect the aruco markers
+    estimate the poses of detected markers
+    assign the detected marker poses to left_hand or right_hand group
+        left_hand markers: 0 to 5 from DICT_4X4_50, marker size 40mm
+        right_hand markers: 6 to 11 from DICT_4X4_50, marker size 40mm
+    estimate the origin frame of cube from the detected aruco markers on cube surfaces
+    track the cube poses for each group using kalman filter
+    publish the tracked poses as PoseStamped messages
+
+
+There exists a unique transform between a detected marker and the origin of the cube. 
+So there are in total 6 transforms for 6 sides of the cube.
+Depending on which marker is detected use the corresponding transform to estimate cube origin.
