@@ -3,9 +3,9 @@
 <package format="3">
   <name>aruco_cube_tracking</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="kedar.rajpathak@rwth-aachen.de">root</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Package to estimate and track pose of a cube with aruco markers on its faces</description>
+  <maintainer email="kedar.rajpathak@rwth-aachen.de">Kedar Rajpathak</maintainer>
+  <license>Apache License 2.0</license>
 
   <depend>rclpy</depend>
   <depend>sensor_msgs</depend>

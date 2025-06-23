@@ -7,7 +7,7 @@ package_name = 'aruco_pose_estimation'
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=[package_name],
     package_data={
         '': ['config/*.yaml', 'config/*.npy', 'launch/*.py', 'hand_tracking/*.py'],
     },
@@ -25,7 +25,7 @@ setup(
     maintainer='Kedar Rajpathak',
     maintainer_email='kedar.rajpathak@rwth-aachen.de',
     description='Package to track and estimate poses of aruco markers',
-    license='TODO: License declaration',
+    license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

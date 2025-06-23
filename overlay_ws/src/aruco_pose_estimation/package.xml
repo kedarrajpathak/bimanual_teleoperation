@@ -6,7 +6,7 @@
   <description>Package to use aruco pose estimation for teleoperation of bimanual manipulator setup using two aruco markers</description>
   <author email="kedar.rajpathak@rwth-aachen.de">Kedar Rajpathak</author>
   <maintainer email="kedar.rajpathak@rwth-aachen.de">Kedar Rajpathak</maintainer>
-  <license>BSD</license>
+  <license>Apache License 2.0</license>
 
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
