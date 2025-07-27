@@ -18,7 +18,8 @@ from launch_param_builder import ParameterBuilder
 def launch_setup(context, *args, **kwargs):
     
     # Initialize Arguments
-    robot_ip = LaunchConfiguration("robot_ip")
+    left_robot_ip = LaunchConfiguration("left_robot_ip")
+    right_robot_ip = LaunchConfiguration("right_robot_ip")
     use_fake_hardware = LaunchConfiguration("use_fake_hardware")
     sim_isaac = LaunchConfiguration("sim_isaac")
     gripper_max_velocity = LaunchConfiguration("gripper_max_velocity")
@@ -28,7 +29,8 @@ def launch_setup(context, *args, **kwargs):
     use_internal_bus_gripper_comm = LaunchConfiguration("use_internal_bus_gripper_comm")
     
     launch_arguments = {
-        "robot_ip": robot_ip,
+        "left_robot_ip": left_robot_ip,
+        "right_robot_ip": right_robot_ip,
         "use_fake_hardware": use_fake_hardware,
         "sim_isaac": sim_isaac,
         "gripper": "robotiq_2f_85",
@@ -190,7 +192,13 @@ def generate_launch_description():
     declared_arguments = []
     declared_arguments.append(
         DeclareLaunchArgument(
-            "robot_ip",
+            "left_robot_ip",
+            description="IP address by which the robot can be reached.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "right_robot_ip",
             description="IP address by which the robot can be reached.",
         )
     )

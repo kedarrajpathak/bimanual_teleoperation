@@ -6,7 +6,8 @@
     <xacro:arg name="arm" default="gen3" />
     <xacro:arg name="dof" default="" />
     <xacro:arg name="vision" default="true" />
-    <xacro:arg name="robot_ip" default="192.168.11.11" />
+    <xacro:arg name="left_robot_ip" default="192.168.11.11" />
+    <xacro:arg name="right_robot_ip" default="192.168.11.11" />
     <xacro:arg name="username" default="admin" />
     <xacro:arg name="password" default="admin" />
     <xacro:arg name="port" default="10000" />
@@ -45,7 +46,7 @@
         gripper_max_force="$(arg gripper_max_force)"
         dof="$(arg dof)"
         vision="$(arg vision)"
-        robot_ip="$(arg robot_ip)"
+        robot_ip="$(arg left_robot_ip)"
         username="$(arg username)"
         password="$(arg password)"
         port="$(arg port)"
@@ -74,7 +75,7 @@
         gripper_max_force="$(arg gripper_max_force)"
         dof="$(arg dof)"
         vision="$(arg vision)"
-        robot_ip="$(arg robot_ip)"
+        robot_ip="$(arg right_robot_ip)"
         username="$(arg username)"
         password="$(arg password)"
         port="$(arg port)"

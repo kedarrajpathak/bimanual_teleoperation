@@ -24,13 +24,17 @@ MoveIt2 is built from source from the `main` branch. The relevant repositories a
 
 Once the image is built open the folder in devcontainer from vscode.
 
+## Making ArUco Cubes
+
+Print the [pdf](/docs/fold_two_aruco_cubes.pdf) on A4 size paper. Cut, fold and stick the edges to form a cube. Use pencil or straw like objects to make a handles for the cubes. In this demo a diagonal is used to fix a handle to the cubes. The detection and tracking [script](/overlay_ws/src/aruco_cube_tracking/aruco_cube_tracking/aruco_cube_tracking_node.py) has all the transforms from the sides of the cubes to the center of the cube.
+
 ## Demo
 
-### Dual Arm Teleoperation Demo
+### Dual Arm Teleoperation with Aruco Cubes (6D Pose Tracking)
 
 ![Teleoperation using ArUco cubes](docs/aruco_cubes.gif)
 
-### ArUco Pose Estimation Demo
+### Dual Arm Teleoperation with ArUco Markers (3D Pose Tracking + Gripper Open/Close)
 
 ![Teleoperation using ArUco markers](docs/aruco_markers.gif)
 
@@ -39,7 +43,7 @@ Once the image is built open the folder in devcontainer from vscode.
 - run `xhost +` before any command and execute following commands each in a new termianl
 
 - ```sh
-  ros2 launch dual_arm_kinova_moveit_config move_group_kinova.launch.py robot_ip:=yyy.yyy.yyy.yyy use_fake_hardware:=true
+  ros2 launch dual_arm_kinova_moveit_config move_group_kinova.launch.py left_robot_ip:=yyy.yyy.yyy.yyy right_robot_ip:=yyy.yyy.yyy.yyy use_fake_hardware:=true
 
   # To start estimation and tracking of poses of individual markers
   ros2 launch aruco_pose_estimation aruco_pose_estimation.launch.py

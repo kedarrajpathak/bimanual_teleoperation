@@ -1,6 +1,10 @@
 {
     "name": "Bimanual Teleoperation",
-    "image": "bimanual-teleoperation:latest", // Use the existing Docker image name
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    // "image": "bimanual-teleoperation:latest", // Use the existing Docker image name
     "containerEnv": {
         "DISPLAY": "${localEnv:DISPLAY}",
         "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"

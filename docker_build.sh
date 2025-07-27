@@ -1,1 +1,1 @@
-docker build -t bimanual-teleoperation:latest .
+docker build -t bimanual-teleoperation:latest -f .devcontainer/Dockerfile .
